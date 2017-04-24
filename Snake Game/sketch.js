@@ -1,6 +1,7 @@
 var snake;
 var pixSize = 20;
 var food;
+var score = 0;
 
 function setup() {
     createCanvas(600, 600);
@@ -21,6 +22,10 @@ function draw() {
 
     fill(255,255,0);
     rect(food.x, food.y, pixSize, pixSize);
+
+    fill(255);
+    textSize(32);
+    text(snake.total, 550, 30);
 }
 
 function keyPressed() {

@@ -12,6 +12,12 @@ function Snake() {
         this.x += this.xVelocity*pixSize;
         this.y += this.yVelocity*pixSize;
 
+        if(this.x >= width || this.y >= height){
+            this.total = 0;
+            this.tail = [];
+        }
+        
+
         this.x = constrain(this.x, 0, width - pixSize);
         this.y = constrain(this.y, 0, height - pixSize);
 
